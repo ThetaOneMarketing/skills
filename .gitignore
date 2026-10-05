@@ -1,0 +1,14 @@
+# PUBLIC REPO. Allowlist only: anything not named below can never be committed.
+# To publish a new skill, add it here on purpose.
+/*
+!/.gitignore
+!/.claude-plugin/
+!/README.md
+!/LICENSE
+!/ATTRIBUTION.md
+!/plugins/
+/plugins/*
+!/plugins/hatch/
+!/plugins/raise-the-bar/
+.DS_Store
+.hatch/

@@ -1,0 +1,43 @@
+{
+  "name": "localpro-skills",
+  "owner": {
+    "name": "Joey Farbstein",
+    "url": "https://localprosolutions.com"
+  },
+  "metadata": {
+    "description": "Claude Code skills from LocalPro Solutions: hatch and raise-the-bar."
+  },
+  "plugins": [
+    {
+      "name": "hatch",
+      "source": "./plugins/hatch",
+      "strict": false,
+      "version": "0.1.0",
+      "description": "Turn a fuzzy problem, half-baked idea, or risky decision into a shipped, defended result. Frame, diverge, judge, red-team, build, ship-gate.",
+      "category": "productivity",
+      "keywords": [
+        "ideation",
+        "decision-making",
+        "red-team",
+        "critique",
+        "council",
+        "workflow"
+      ]
+    },
+    {
+      "name": "raise-the-bar",
+      "source": "./plugins/raise-the-bar",
+      "strict": false,
+      "version": "0.1.0",
+      "description": "Before calling work done, a fresh-context critic judges it against the original ask. SHIP or NOT YET, fix the one biggest gap, loop up to 3 rounds.",
+      "category": "productivity",
+      "keywords": [
+        "critique",
+        "review",
+        "quality",
+        "self-check",
+        "workflow"
+      ]
+    }
+  ]
+}
