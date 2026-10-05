@@ -6,9 +6,8 @@
 !/README.md
 !/LICENSE
 !/ATTRIBUTION.md
-!/plugins/
-/plugins/*
-!/plugins/hatch/
-!/plugins/raise-the-bar/
+!/skills/
+/skills/*
+!/skills/raise-the-bar/
 .DS_Store
 .hatch/

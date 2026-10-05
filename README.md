@@ -1,58 +1,41 @@
-# LocalPro Skills
+# Skills
 
-Two skills for Claude Code that make the agent think harder before it calls
-something done.
+Free skills for people who build with AI. I use these exact files every day
+to run a marketing agency on AI agents. More at
+[joeyfarbstein.com/skills](https://joeyfarbstein.com/skills).
 
-| Skill | What it does |
-|---|---|
-| **hatch** | Turns a fuzzy problem or risky decision into a shipped, defended result. Six stages: frame, diverge, judge, red-team, build, ship-gate. Each stage also runs alone. |
-| **raise-the-bar** | Before the agent reports "done", a fresh critic that sees only your original ask and the finished work says SHIP or NOT YET. The agent fixes the one biggest gap and loops, three rounds at most. |
+| Skill | What it does | Lives in |
+|---|---|---|
+| **raise-the-bar** | The AI can't grade its own work. Before it says "done", a fresh critic that sees only your ask and the finished work says SHIP or NOT YET, and names the one thing to fix. Three rounds at most. | this repo |
+| **hatch** | Turns a fuzzy idea or risky decision into a clear, defended result. Six stages: frame, diverge, judge, red-team, build, ship-gate. | [ThetaOneMarketing/hatch](https://github.com/ThetaOneMarketing/hatch) |
 
-## Install
+## Install raise-the-bar
 
-**Option A: as a Claude Code plugin.** Run these inside Claude Code:
-
-```
-/plugin marketplace add ThetaOneMarketing/public-skills
-/plugin install hatch@localpro-skills
-/plugin install raise-the-bar@localpro-skills
-```
-
-Install one or both. Restart Claude Code if the skills do not show up.
-
-**Option B: copy the folders.** Works anywhere that reads `~/.claude/skills`:
+Copy one file into your project:
 
 ```
-git clone https://github.com/ThetaOneMarketing/public-skills.git
-mkdir -p ~/.claude/skills
-cp -r public-skills/plugins/hatch/skills/hatch public-skills/plugins/raise-the-bar/skills/raise-the-bar ~/.claude/skills/
+npx skills@latest add ThetaOneMarketing/skills --skill=raise-the-bar
 ```
 
-## Use
+Or install it as a Claude Code plugin that updates when I ship:
 
 ```
-/hatch <your problem>                 full chain, standard depth
-/hatch quick <problem>                ~4 subagents, no council
-/hatch deep <problem>                 up to ~25 subagents, live verification
-/hatch frame | diverge | judge | redteam | gate <input>
+claude plugin marketplace add ThetaOneMarketing/skills && claude plugin install raise-the-bar@joey
 ```
 
-Plain words work too: "hatch this, quick", "just red-team it", "raise the
-bar on this before you call it done".
+Then finish something and type **raise the bar**.
 
-raise-the-bar also fires on its own when the agent finishes a real
-deliverable (a page, a report, a code change). It skips chat answers and
-trivial edits.
+## Install hatch
 
-## Cost
+```
+claude plugin marketplace add ThetaOneMarketing/hatch && claude plugin install hatch@hatch
+```
 
-Both skills spend extra model calls on purpose. A standard hatch run is
-about 20 subagent calls; raise-the-bar is 1 to 3. Use the single hatch verbs
-when you do not need the whole chain.
+Then type `/hatch:hatch <your problem>`. If you already added this
+marketplace, `claude plugin install hatch@joey` gets you the same skill.
 
-## Credits
+## License
 
-The methods behind these skills come from people who published them first.
-See [ATTRIBUTION.md](ATTRIBUTION.md).
+MIT. Credits are in [ATTRIBUTION.md](ATTRIBUTION.md).
 
-Made by Joey Farbstein, [LocalPro Solutions](https://localprosolutions.com).
+Made by [Joey Farbstein](https://joeyfarbstein.com).

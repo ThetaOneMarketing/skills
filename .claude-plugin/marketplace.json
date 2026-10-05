@@ -1,43 +1,32 @@
 {
-  "name": "localpro-skills",
+  "name": "joey",
   "owner": {
     "name": "Joey Farbstein",
-    "url": "https://localprosolutions.com"
+    "url": "https://joeyfarbstein.com"
   },
   "metadata": {
-    "description": "Claude Code skills from LocalPro Solutions: hatch and raise-the-bar."
+    "description": "Joey Farbstein's free skills for Claude Code: raise-the-bar and hatch."
   },
   "plugins": [
     {
-      "name": "hatch",
-      "source": "./plugins/hatch",
+      "name": "raise-the-bar",
+      "source": "./",
       "strict": false,
       "version": "0.1.0",
-      "description": "Turn a fuzzy problem, half-baked idea, or risky decision into a shipped, defended result. Frame, diverge, judge, red-team, build, ship-gate.",
+      "description": "The AI can't grade its own work. A fresh critic says SHIP or NOT YET and names the one thing to fix. Loops up to 3 rounds.",
       "category": "productivity",
-      "keywords": [
-        "ideation",
-        "decision-making",
-        "red-team",
-        "critique",
-        "council",
-        "workflow"
-      ]
+      "keywords": ["critique", "review", "quality", "self-check", "workflow"],
+      "skills": ["./skills/raise-the-bar"]
     },
     {
-      "name": "raise-the-bar",
-      "source": "./plugins/raise-the-bar",
-      "strict": false,
-      "version": "0.1.0",
-      "description": "Before calling work done, a fresh-context critic judges it against the original ask. SHIP or NOT YET, fix the one biggest gap, loop up to 3 rounds.",
+      "name": "hatch",
+      "source": {
+        "source": "github",
+        "repo": "ThetaOneMarketing/hatch"
+      },
+      "description": "Turn a fuzzy problem, half-baked idea, or risky decision into a shipped, defended result. Frame, diverge, judge, red-team, build, ship-gate.",
       "category": "productivity",
-      "keywords": [
-        "critique",
-        "review",
-        "quality",
-        "self-check",
-        "workflow"
-      ]
+      "keywords": ["ideation", "decision-making", "red-team", "critique", "council", "workflow"]
     }
   ]
 }
